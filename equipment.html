@@ -1,115 +1,224 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Equipment</title>
-  </head>
-  <body>
-    <nav>
-      <div class="logo">
-        <a href="index.html">
-          <img src="images/logo.jpg" alt="logo" id="logo" />
-        </a>
-      </div>
-      <ul class="nav-links">
-        <li class="nav-item1"><a href="about.html">About</a></li>
-        <li class="nav-item2"><a href="gallery.html">Gallery</a></li>
-        <li class="nav-item3"><a href="equipment.html">Equipment</a></li>
-        <li class="nav-item4"><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div>
-      <h2>
-        I started my grilling on an outdoor gas barbeque, but quickly expanded
-        from there.
-      </h2>
+<body>
+  <nav>
+    <div class="navlink">
+      <a href="about.html">About</a>
     </div>
-    <div>
-      <h2>
-        Outdoor Gas Grill:
-      </h2>
+    <div class="navlink">
+      <a href="gallery.html">Gallery</a>
+    </div>
+    <div id="logo" class="navlink">
+      <a href="index.html">
+        <img src="images/logo.jpg" alt="logo" id="logo" />
+      </a>
+    </div>
+    <div class="navlink">
+      <a class="active-page" href="equipment.html">Equipment</a>
+    </div>
+    <div class="navlink">
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+  <div>
+    <h2 id="intro">
+      I started grilling on an outdoor gas barbeque, but quickly expanded from
+      there
+    </h2>
+    <div class="slides w3-content w3-display-container">
+      <img
+        class="myslides"
+        src="images/gas_grill.png"
+        alt="Outdoor Gas Grill"
+      />
+      <img
+        class="myslides"
+        src="images/square_smoker.png"
+        alt="Small Smoker"
+      />
+      <img
+        class="myslides"
+        src="images/vertical_smoker.png"
+        alt="Large Smoker"
+      />
+      <img
+        class="myslides"
+        src="images/parilla.png"
+        alt="Grillworks Parilla"
+      />
+      <img class="myslides" src="images/chester.jpeg" alt="Chester" />
       <div>
-        <img src="images/grill1.jpg" alt="Outdoor Gas Grill" />
+        <button
+          id="mybutton"
+          class="w3-button w3-display-left"
+          onclick="plusDivs(-1)"
+        >
+          &#10094;
+        </button>
+        <button
+          id="mybutton"
+          class="w3-button w3-display-right"
+          onclick="plusDivs(+1)"
+        >
+          &#10095;
+        </button>
       </div>
-      <h3>Info:</h3>
-      <ul>
-        <li>
-          Reaches Tempuratures up to 1500 degrees
-        </li>
-        <li>Has 4 Grill Racks for maximum space</li>
-        <li>Weather resistant and durable</li>
-      </ul>
-      <p>
-        This Grill has lasted me years, and is one of the most consistent pieces
-        of hardware I own. It has prepared me some delicious cuts, all while
-        withstanding many cold winters.
-      </p>
     </div>
-    <div>
-      <h2>
-        Small Smoker:
-      </h2>
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs((slideIndex += n));
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("myslides");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+      }
+    </script>
+
+    <div class="equip-format">
       <div>
-        <img src="grill1.jpg" alt="Outdoor Gas Grill" />
+        <h2>
+          Outdoor Gas Grill:
+        </h2>
+        <div>
+          <img src="images/gas_grill.jpg" alt="Outdoor Gas Grill" />
+          <br />
+          <a
+            href="https://www.dcsappliances.com/us/outdoor-kitchens/grill/freestanding-grills/36-traditional-grill-with-rotisserie.BH1-36R-N.html"
+            >View the grill here</a
+          >
+        </div>
+        <h3>Info:</h3>
+        <ul>
+          <li>
+            Reaches Tempuratures up to 1500 degrees
+          </li>
+          <li>Has 4 Grill Racks for maximum space</li>
+          <li>Weather resistant and durable</li>
+        </ul>
+        <p>
+          This Grill has lasted me years, and is one of the most consistent
+          pieces of hardware I own. It has prepared me some delicious cuts,
+          all while withstanding many cold winters.
+        </p>
       </div>
-      <h3>Info:</h3>
-      <ul>
-        <li>
-          Reaches Tempuratures up to 1500 degrees
-        </li>
-        <li>Has 4 Grill Racks for maximum space</li>
-        <li>Weather resistant and durable</li>
-      </ul>
-      <p>
-        This Grill has lasted me years, and is one of the most consistent pieces
-        of hardware I own. It has prepared me some delicious cuts, all while
-        withstanding many cold winters.
-      </p>
-    </div>
-    <div>
-      <h2>
-        Large Smoker:
-      </h2>
       <div>
-        <img src="grill1.jpg" alt="Outdoor Gas Grill" />
+        <h2>
+          Small Smoker:
+        </h2>
+        <div class="mySlides">
+          <img src="images/square_smoker.jpg" alt="Small Smoker" />
+          <br />
+          <a
+            href="https://www.bbqguys.com/cookshack/amerique-electric-bbq-smoker-sm066"
+            >View the grill here</a
+          >
+        </div>
+        <h3>Info:</h3>
+        <ul>
+          <li>
+            Reaches Tempuratures up to 1500 degrees
+          </li>
+          <li>Has 4 Grill Racks for maximum space</li>
+          <li>Weather resistant and durable</li>
+        </ul>
+        <p>
+          This Grill has lasted me years, and is one of the most consistent
+          pieces of hardware I own. It has prepared me some delicious cuts,
+          all while withstanding many cold winters.
+        </p>
       </div>
-      <h3>Info:</h3>
-      <ul>
-        <li>
-          Reaches Tempuratures up to 1500 degrees
-        </li>
-        <li>Has 4 Grill Racks for maximum space</li>
-        <li>Weather resistant and durable</li>
-      </ul>
-      <p>
-        This Grill has lasted me years, and is one of the most consistent pieces
-        of hardware I own. It has prepared me some delicious cuts, all while
-        withstanding many cold winters.
-      </p>
-    </div>
-    <div>
-      <h2>
-        Parilla:
-      </h2>
       <div>
-        <img src="grill1.jpg" alt="Outdoor Gas Grill" />
+        <h2>
+          Large Smoker:
+        </h2>
+        <div class="mySlides">
+          <img src="images/vertical_smoker.jpg" alt="Large Smoker" />
+          <br />
+          <a
+            href="https://www.amazon.com/Landmann-3495GLA-Mountain-Vertical-Smoker/dp/B005TH1T72"
+            >View the grill here</a
+          >
+        </div>
+        <h3>Info:</h3>
+        <ul>
+          <li>
+            Reaches Tempuratures up to 1500 degrees
+          </li>
+          <li>Has 4 Grill Racks for maximum space</li>
+          <li>Weather resistant and durable</li>
+        </ul>
+        <p>
+          This Grill has lasted me years, and is one of the most consistent
+          pieces of hardware I own. It has prepared me some delicious cuts,
+          all while withstanding many cold winters.
+        </p>
       </div>
-      <h3>Info:</h3>
-      <ul>
-        <li>
-          Reaches Tempuratures up to 1500 degrees
-        </li>
-        <li>Has 4 Grill Racks for maximum space</li>
-        <li>Weather resistant and durable</li>
-      </ul>
-      <p>
-        This Grill has lasted me years, and is one of the most consistent pieces
-        of hardware I own. It has prepared me some delicious cuts, all while
-        withstanding many cold winters.
-      </p>
+      <div>
+        <h2>
+          Parilla:
+        </h2>
+        <div class="mySlides">
+          <img src="images/parilla.jpg" alt="Grillworks Parilla" />
+          <br />
+          <a href="http://www.grillworksusa.com/products/the-grillworks-36"
+            >View the grill here</a
+          >
+        </div>
+        <h3>Info:</h3>
+        <ul>
+          <li>
+            Reaches Tempuratures up to 1500 degrees
+          </li>
+          <li>Has 4 Grill Racks for maximum space</li>
+          <li>Weather resistant and durable</li>
+        </ul>
+        <p>
+          This Grill has lasted me years, and is one of the most consistent
+          pieces of hardware I own. It has prepared me some delicious cuts,
+          all while withstanding many cold winters.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Optional: Grill Dog
+        </h2>
+        <div class="mySlides">
+          <img src="images/chester.jpeg" alt="Chester" />
+          <br />
+          <a href="http://www.grillworksusa.com/products/the-grillworks-36"
+            >View the dog here</a
+          >
+        </div>
+        <h3>Info:</h3>
+        <ul>
+          <li>
+            Loves belly rubs
+          </li>
+          <li>Sleeps over 80% of the day</li>
+          <li>Prefers his steak medium-raw</li>
+        </ul>
+        <p>
+          This trusty Steed is not necessary, but adds security and safety to
+          the grill area. With someone to oversee fire-hazards and help out on
+          hand, he is the perfect complement to the Grills.
+        </p>
+      </div>
     </div>
-  </body>
+  </div>
+</body>
+<div class="footer">
+  <footer>This website was made by Josh Green - 2019</footer>
+</div>
 </html>
